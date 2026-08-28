@@ -1,0 +1,18 @@
+services:
+  ssh-644.cyrhades.fr:
+    container_name: ssh-644
+    build:
+      context: ./.docker/ssh
+      args:
+        LANGUAGE: ${LANGUAGE:-fr}
+    labels:
+      ho.ctf.cyrhades: "challenge"
+      ho.ctf.cyrhades.webssh: "1"
+    environment:
+      SSH_HOSTNAME: "ssh-644.cyrhades.fr"
+      SSH_PORT: 22
+      SSH_USERNAME: "cyrhades"
+      SSH_PASSWORD: "secret"
+    restart: unless-stopped
+  las-vegas-baby.cyrhades.fr:
+    image: anssi/fcsc2026-misc-las-vegas-baby:latest

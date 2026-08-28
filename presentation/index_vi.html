@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="vi">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Các CTF của Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #644</h3>
+                            <h2 class="section-title">Las Vegas Baby</h2>
+                            <p>
+Bạn đang ở Las Vegas, giữa một giải đấu poker Texas Hold'em. Tất cả người chơi đã đi nghỉ giải lao, và bạn thấy mình ở một mình với bộ bài và lương tâm của mình. Cảm giác muốn gian lận bỗng trỗi dậy.
+<br /><br />
+Tuy nhiên, nhiệm vụ không hề dễ dàng: người chia bài sẽ xáo/cắt bài ở một vị trí ngẫu nhiên trước khi chia bài. Bạn cần phải khôn khéo để việc chia bài mang lại cho bạn bộ bài mạnh nhất, bất kể người chia bài cắt bài ở vị trí nào. Hơn nữa, bạn biết mình sẽ ở vị trí small blind, nhưng chưa biết sẽ có 3 hay 4 người chơi sau giờ giải lao.
+<br /><br />
+Mục tiêu của bạn là sắp xếp bộ bài sao cho chắc chắn sẽ thắng ván bài tiếp theo.
+<br /><br />
+<img src="assets/images/las-vegas-baby.png">
+                            </p>
+                            <h4>Tệp cần nghiên cứu:</h4>
+                            <p>../files/las-vegas-baby.py</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                Liên kết chính thức:
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/misc/fcsc2026-misc-las-vegas-baby/">https://hackropole.fr/fr/challenges/misc/fcsc2026-misc-las-vegas-baby/</a>
+                                <br />
+                                Tác giả: graniter
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Học tập</h3>
+                            <h2 class="section-title">Tài liệu và Video</h2>
+                            <p class="section-subtitle">
+                                Hiện tại chưa có tài liệu
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Trợ giúp</h3>
+                            <h2 class="section-title">Lời khuyên và gợi ý</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Chủ đề trên Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="Cuộn lên đầu trang" title="Trở lại đầu trang web"></a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="th">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - CTF ของ Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #644</h3>
+                            <h2 class="section-title">Las Vegas Baby</h2>
+                            <p>
+คุณอยู่ในลาสเวกัส ท่ามกลางการแข่งขันโป๊กเกอร์ Texas Hold’em ผู้เล่นทุกคนได้ออกไปพักเบรก และคุณพบว่าตัวเองอยู่ตามลำพังกับสำรับไพ่และมโนธรรมของคุณ จากนั้นความรู้สึกอยากโกงก็ผุดขึ้นมา
+<br /><br />
+อย่างไรก็ตาม งานนี้ไม่ง่ายขนาดนั้น: เจ้ามือจะตัดสำรับไพ่ในตำแหน่งสุ่มก่อนที่จะแจกไพ่ คุณต้องฉลาดพอที่จะทำให้การแจกไพ่ทำให้คุณได้แต้มที่ดีที่สุด ไม่ว่าเจ้ามือจะตัดไพ่แบบใดก็ตาม นอกจากนี้ คุณรู้ว่าคุณจะอยู่ที่ตำแหน่ง small blind แต่ยังไม่รู้ว่าจะมีผู้เล่น 3 หรือ 4 คนหลังพักเบรก
+<br /><br />
+เป้าหมายของคุณคือการเรียงลำดับสำรับไพ่เพื่อให้มั่นใจว่าจะชนะในมือถัดไป
+<br /><br />
+<img src="assets/images/las-vegas-baby.png">
+                            </p>
+                            <h4>ไฟล์ที่ต้องศึกษา:</h4>
+                            <p>../files/las-vegas-baby.py</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                ลิงก์ทางการ:
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/misc/fcsc2026-misc-las-vegas-baby/">https://hackropole.fr/fr/challenges/misc/fcsc2026-misc-las-vegas-baby/</a>
+                                <br />
+                                ผู้เขียน: graniter
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>การเรียนรู้</h3>
+                            <h2 class="section-title">เอกสารและวิดีโอ</h2>
+                            <p class="section-subtitle">
+                                ยังไม่มีเอกสารในขณะนี้
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>ความช่วยเหลือ</h3>
+                            <h2 class="section-title">คำแนะนำและคำใบ้</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">เธรดบน Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="เลื่อนขึ้นด้านบน" title="กลับไปด้านบนของเว็บไซต์"></a>
+    </div>
+</body>
+
+</html>

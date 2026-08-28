@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="ko">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - Cyrhades의 CTF</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #644</h3>
+                            <h2 class="section-title">Las Vegas Baby</h2>
+                            <p>
+당신은 라스베이거스에서 텍사스 홀덤 포커 토너먼트의 한가운데에 있습니다. 모든 플레이어가 휴식을 취하러 자리를 비웠고, 당신은 카드 덱과 자신의 양심만을 마주한 채 혼자 남겨졌습니다. 그러자 속임수를 쓰고 싶은 충동이 일어납니다.
+<br /><br />
+하지만 작업이 그리 쉽지는 않습니다. 딜러는 카드를 나누어 주기 전에 무작위 위치에서 덱을 컷합니다. 딜러가 어떤 위치에서 컷하더라도 배분 결과 당신이 최고의 패를 얻을 수 있도록 영리하게 대처해야 합니다. 또한 당신은 자신이 스몰 블라인드 위치에 있다는 것을 알고 있지만, 휴식 시간 이후 플레이어가 3명일지 4명일지는 아직 알지 못합니다.
+<br /><br />
+당신의 목표는 다음 핸드에서 반드시 승리할 수 있도록 카드 덱을 정렬하는 것입니다.
+<br /><br />
+<img src="assets/images/las-vegas-baby.png">
+                            </p>
+                            <h4>분석할 파일:</h4>
+                            <p>../files/las-vegas-baby.py</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                공식 링크:
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/misc/fcsc2026-misc-las-vegas-baby/">https://hackropole.fr/fr/challenges/misc/fcsc2026-misc-las-vegas-baby/</a>
+                                <br />
+                                작성자: graniter
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>학습</h3>
+                            <h2 class="section-title">문서 및 동영상</h2>
+                            <p class="section-subtitle">
+                                현재 문서가 없습니다
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>도움말</h3>
+                            <h2 class="section-title">팁과 힌트</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">Discord 스레드</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="페이지 맨 위로 이동" title="사이트 상단으로 돌아가기"></a>
+    </div>
+</body>
+
+</html>

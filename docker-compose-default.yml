@@ -1,0 +1,11 @@
+services:
+  las-vegas-baby:
+    image: anssi/fcsc2026-misc-las-vegas-baby:latest
+    environment:
+      - HOOS_CTF_EMAIL=${HOOS_CTF_EMAIL:-}
+      - HOOS_CTF_USERNAME=${HOOS_CTF_USERNAME:-}
+      - LANGUAGE=${LANGUAGE:-fr}
+    labels:
+      ho.ctf.cyrhades: "challenge"
+    ports:
+      - ${PORT}:4000

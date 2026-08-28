@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head lang="ar">
+    <meta charset="UTF-8">
+    <!--Page Title-->
+    <title>Hack-Oeil - تحديات CTF لـ Cyrhades</title>
+    <!--Meta Keywords and Description-->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" title="Favicon" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="./assets/js/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Vérifie si la fenêtre est dans une iframe
+            if (window.self !== window.top) {
+                document.querySelectorAll('a').forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        const a = event.target.closest('a[href^="http"]');
+                        if (a) {
+                            event.preventDefault();
+                            window.parent.postMessage({
+                                type: "open-external",
+                                url: a.href
+                            }, "*");
+                        }
+                    });
+                });
+            }
+            // Active la coloration syntaxique :
+            if (window.hljs) {
+                hljs.highlightAll();
+            } else {
+                console.error("Highlight.js non chargé !");
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <!--Main Content Area-->
+        <main id="content">
+            <!--Ctf-->
+            <section class="ctf scrollto">
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>Challenge #644</h3>
+                            <h2 class="section-title">Las Vegas Baby</h2>
+                            <p>
+أنت في لاس فيغاس، في خضم بطولة بوكر تكساس هولديم. لقد غادر جميع اللاعبين في استراحة، ووجدت نفسك بمفردك مع مجموعة أوراق اللعب وضميرك. تروادك حينها رغبة في الغش.
+<br /><br />
+ومع ذلك، فإن المهمة ليست بهذه السهولة: يقوم الموزع بقطع مجموعة الأوراق في موضع عشوائي قبل توزيع البطاقات. يجب أن تكون ذكياً بحيث يمنحك التوزيع أفضل يد، مهما كان القطع الذي قام به الموزع. بالإضافة إلى ذلك، أنت تعلم أنك ستكون في موقع الرهان المبدئي الصغير (small blind)، لكنك لا تعرف بعد ما إذا كان هناك 3 أو 4 لاعبين بعد الاستراحة.
+<br /><br />
+هدفك هو ترتيب مجموعة أوراق اللعب بطريقة تضمن لك الفوز باليد القادمة.
+<br /><br />
+<img src="assets/images/las-vegas-baby.png">
+                            </p>
+                            <h4>ملف للدراسة:</h4>
+                            <p>../files/las-vegas-baby.py</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>FCSC 2025</h3>
+                            <h2 class="section-title">Hackropole</h2>
+                            <p class="section-subtitle">
+                                الرابط الرسمي:
+                                <a target="_blank" href="https://hackropole.fr/fr/challenges/misc/fcsc2026-misc-las-vegas-baby/">https://hackropole.fr/fr/challenges/misc/fcsc2026-misc-las-vegas-baby/</a>
+                                <br />
+                                المؤلف: graniter
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>التعليم</h3>
+                            <h2 class="section-title">التوثيق ومقاطع الفيديو</h2>
+                            <p class="section-subtitle">
+                                لا توجد وثائق في الوقت الحالي
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="row clearfix">
+                    <div class="col-1">
+                        <div class="section-heading">
+                            <h3>مساعدة</h3>
+                            <h2 class="section-title">نصائح وتلميحات</h2>
+                            <p class="section-subtitle">
+                                <a target="_blank"
+                                    href="https://discord.com/channels/1175764392307077120/1175764601716092948">موضوع على Discord</a>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!--End of Ctf-->
+        </main>
+        <!--End Main Content Area-->
+
+        <a id="scrollUp" href="#wrapper" style="position: fixed; z-index: 1000;"
+            aria-label="الرجوع إلى أعلى الصفحة" title="الرجوع إلى أول الموقع"></a>
+    </div>
+</body>
+
+</html>
