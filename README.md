@@ -1,4 +1,4 @@
-# FCSC 2025 Las Vegas Baby
+# FCSC 2026 Las Vegas Baby
 
 Vous êtes à Las Vegas, en plein tournoi de poker Texas Hold’em. Tous les joueurs sont partis en pause, et vous vous retrouvez seul avec le paquet de cartes et votre conscience. L’envie vous prend alors de tricher.
 
